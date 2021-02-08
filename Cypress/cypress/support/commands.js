@@ -23,5 +23,6 @@ Cypress.Commands.add('importUsers', (fileName, filePath) => {
         cy.xpath('//tr[2]/td[2]/select[@class="form-control"]').select('BIRTH_DATE (YYYY-MM-DD)');
         cy.xpath('//div[13]/div/section/div[1]/div[5]/div/div[3]/div/div/div/a').click();
         cy.get('h3').should('contain', 'Your file is being processed. We will inform you by email when it is completed');
+        cy.wait(5000);
     })
 })
