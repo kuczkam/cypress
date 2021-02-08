@@ -1,0 +1,9 @@
+{
+    "projectId": "5ssgaj",
+    "baseUrl": "https://control.edrone.me/",
+    "login": "kucz.kam@gmail.com",
+    "pass": "asdasdASD1",
+    "csvFileName": "edroneTestUsers.csv",
+    "csvUpdateFileName": "edroneTestUpdateUser.csv",
+    "csvFilePath": "C:/Users/kamil.kuczynski/repos/dron/Cypress/cypress/fixtures/"
+}
