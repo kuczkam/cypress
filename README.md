@@ -1,7 +1,7 @@
 ###### example of automate tests in Cypress based on controle.edrone.me
 
-** After clone: **
+**After clone:**
 > npm install
 
-** To open cypress **
+**To open cypress**
 > npx cypress open
