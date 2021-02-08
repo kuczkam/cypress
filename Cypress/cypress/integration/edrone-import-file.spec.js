@@ -11,20 +11,20 @@ describe('Login', () => {
     }) 
 
     it('User have a birth date', () => {
-        const user = 'edrone1%40test.pl';
+        const user = 'edrone01%40test.pl';
         cy.visit(Cypress.config().baseUrl + 'customer/single?email=' + user);
         cy.get('.personal-details > div > div > p').should('contain', '2020-4-4');
     }) 
 
     it('User do not have a birth date', () => {
-        const user = 'edrone2%40test.pl';
+        const user = 'edrone02%40test.pl';
         cy.visit(Cypress.config().baseUrl + 'customer/single?email=' + user);
         cy.get('.personal-details > div > div > p').should('not.contain', '1986');
     }) 
 
     it('Update user to add birth date', () => {
         const fileName = Cypress.config().csvUpdateFileName;
-        const user = 'edrone3%40test.pl';
+        const user = 'edrone02%40test.pl';
 
         cy.visit(Cypress.config().baseUrl + "settings/import");
         cy.importUsers(fileName, Cypress.config().csvFilePath + fileName);
