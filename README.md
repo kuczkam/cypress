@@ -15,3 +15,13 @@ In the `Cypress/cypress/support/commands.js` you can find custom commends for al
 In the `Cypress/cypress/support/selectors.js` you can find selectors for all pages.<br />
 In the `Cypress/cypress/support/messages.js` you can find messages displayed on Mission Control.<br />
 
+## Screenshots
+
+Screenshots are store in the `Cypress/cypress/report/html/res/screenshots` folder with the name of the test
+
+## Username and Password
+
+Before run tests you have to add username and password in `Cypress/cypress.json`:
+> "login": "",
+> "pass": "",
+
