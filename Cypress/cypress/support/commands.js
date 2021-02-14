@@ -12,18 +12,7 @@ Cypress.Commands.add('loginToMissionControl', () => {
     cy.get(selector.username).type(Cypress.config().login);
     cy.get(selector.password).type(Cypress.config().pass);
     cy.get(selector.loginBtn).click();
-    cy.waitForMissionControlOpen();
-})
-
-Cypress.Commands.add('waitForMissionControlOpen', () => {
-    cy.get('body').then(($missionCoontrolName) => {
-        if ($missionCoontrolName.text().includes('MISSION CONTROL')) {
-            return cy.log('user has logged in successfully')
-        } else {
-            cy.wait(200);
-            cy.waitForMissionControlOpen()
-        }
-    })
+    cy.waitForTextExistsInBody('MISSION CONTROL');
 })
 
 /**
@@ -44,5 +33,31 @@ Cypress.Commands.add('importUsersWithTwoColumn', (fileName) => {
         cy.xpath(selector.secondMappingSelector).select('BIRTH_DATE (YYYY-MM-DD)');
         cy.xpath(selector.importBtn).click();
         cy.get('h3').should('contain', message.fileIsBeingProcessed);
+    })
+})
+
+/**
+ * custom waits commends to use in mission control
+ * @example waitForTextExistsInBody('test');
+ */
+Cypress.Commands.add('waitForTextExistsInBody', (expectedText) => {
+    cy.get('body').then(($missionCoontrolName) => {
+        if ($missionCoontrolName.text().includes(expectedText)) {
+            return cy.log('the given text was found in the body')
+        } else {
+            cy.wait(200);
+            cy.waitForTextEcistInBody()
+        }
+    })
+})
+
+Cypress.Commands.add('waitForLoadingSpinnerNotDisplay', () => {
+    cy.get(selector.loading).then(($loading) => {
+        if ($loading.css("display") === 'none') {
+            return cy.log('spinner not display')
+        } else {
+            cy.wait(200);
+            cy.waitForLoadingSpinnerNotDisplay()
+        }
     })
 })

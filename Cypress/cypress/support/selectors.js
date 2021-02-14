@@ -27,8 +27,15 @@ export default {
     importBtn: '//div[13]/div/section/div[1]/div[5]/div/div[3]/div/div/div/a',
 
     /**
-     * selectores for custmomer page
+     * selectors for custmomer page
      * @example cy.birthDayDate
      */
     birthDayDate: '.personal-details > div > div > p',
+
+    /**
+     * selectors for mission control
+     * @example cy.loading
+     */
+    loading: '#loading'
+
 }
