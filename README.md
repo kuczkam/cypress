@@ -22,6 +22,6 @@ Screenshots are store in the `Cypress/cypress/report/html/res/screenshots` folde
 ## Username and Password
 
 Before run tests you have to add username and password in `Cypress/cypress.json`:
-> "login": "",
+> "login": "",<br />
 > "pass": "",
 
