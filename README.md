@@ -3,5 +3,5 @@
 **After clone:**
 > npm install
 
-**To open cypress**
+**To open cypress go to Cypress folder:**
 > npx cypress open
