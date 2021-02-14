@@ -7,7 +7,7 @@
 **To open cypress go to Cypress folder in console and run:**
 > npx cypress open
 
-or you can run test straight from:
+or you can run tests straight from the console:
 > npx cypress run
 
 ## Useful information
