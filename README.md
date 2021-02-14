@@ -1,6 +1,7 @@
 ###### example of automate tests in Cypress based on controle.edrone.me
 
-**After clone run in console:**
+## Project setup
+
 > npm install
 
 **To open cypress go to Cypress folder in console and run:**
