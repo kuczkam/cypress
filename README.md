@@ -11,6 +11,7 @@ or you can run test straight from:
 
 ## Useful information
 
-In the `Cypress/cypress/support/commands.js` you can find custom commends for all pages and custom waits.
-In the `Cypress/cypress/support/selectors.js` you can find selectors for all pages.
-In the `Cypress/cypress/support/messages.js` you can find messages displayed on Mission Control.
+In the `Cypress/cypress/support/commands.js` you can find custom commends for all pages and custom waits.<br />
+In the `Cypress/cypress/support/selectors.js` you can find selectors for all pages.<br />
+In the `Cypress/cypress/support/messages.js` you can find messages displayed on Mission Control.<br />
+
