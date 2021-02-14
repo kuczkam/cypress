@@ -4,7 +4,7 @@ import 'cypress-file-upload';
 
 
 /**
- * custom commends to used in login page
+ * custom commands to used in login page
  * @example cy.loginToMissionControl()
  */
 Cypress.Commands.add('loginToMissionControl', () => {
@@ -16,7 +16,7 @@ Cypress.Commands.add('loginToMissionControl', () => {
 })
 
 /**
- * custom commends to used in import page
+ * custom commands to used in import page
  * @example cy.importUsers()
  */
 Cypress.Commands.add('importUsersWithTwoColumn', (fileName) => {
@@ -37,7 +37,7 @@ Cypress.Commands.add('importUsersWithTwoColumn', (fileName) => {
 })
 
 /**
- * custom waits commends to use in mission control
+ * custom waits commands to use in mission control
  * @example waitForTextExistsInBody('test');
  */
 Cypress.Commands.add('waitForTextExistsInBody', (expectedText) => {
@@ -60,4 +60,11 @@ Cypress.Commands.add('waitForLoadingSpinnerNotDisplay', () => {
             cy.waitForLoadingSpinnerNotDisplay()
         }
     })
+})
+
+/**
+ * custom commands to use in mission control
+ */
+Cypress.Commands.add('gotToPage', (url) => {
+    cy.visit(Cypress.config().baseUrl + url);
 })

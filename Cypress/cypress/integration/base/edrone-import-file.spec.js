@@ -8,7 +8,7 @@ describe('Login', () => {
     it('Upload users data ', () => {
         const fileName = Cypress.config().csvFileName;
 
-        cy.visit(Cypress.config().baseUrl + "settings/import");
+        cy.gotToPage("settings/import");
         cy.importUsersWithTwoColumn(fileName);
         
         cy.screenshot('import successful');
@@ -16,7 +16,7 @@ describe('Login', () => {
 
     it('User have a birth date', () => {
         const user = 'edrone1%40test.pl';
-        cy.visit(Cypress.config().baseUrl + 'customer/single?email=' + user);
+        cy.gotToPage('customer/single?email=' + user);
         cy.waitForLoadingSpinnerNotDisplay();
 
         cy.get(selector.birthDayDate).should('contain', '2020-4-4');
@@ -25,7 +25,7 @@ describe('Login', () => {
 
     it('User do not have a birth date', () => {
         const user = 'edrone2%40test.pl';
-        cy.visit(Cypress.config().baseUrl + 'customer/single?email=' + user);
+        cy.gotToPage('customer/single?email=' + user);
         cy.waitForLoadingSpinnerNotDisplay();
 
         cy.get(selector.birthDayDate).should('not.contain', '1986');
@@ -36,9 +36,9 @@ describe('Login', () => {
         const fileName = Cypress.config().csvUpdateFileName;
         const user = 'edrone3%40test.pl';
 
-        cy.visit(Cypress.config().baseUrl + "settings/import");
+        cy.gotToPage("settings/import");
         cy.importUsersWithTwoColumn(fileName);
-        cy.visit(Cypress.config().baseUrl + 'customer/single?email=' + user);
+        cy.gotToPage('customer/single?email=' + user);
         cy.waitForLoadingSpinnerNotDisplay();
 
         cy.get(selector.birthDayDate).should('contain', '1986-2-1');
