@@ -7,8 +7,8 @@
         "runMode": 2,
         "openMode": 0
       },
-    "login": "kucz.kam@gmail.com",
-    "pass": "asdasdASD1",
+    "login": "",
+    "pass": "",
     "csvFileName": "edroneTestUsers.csv",
     "csvUpdateFileName": "edroneTestUpdateUser.csv"
 }
